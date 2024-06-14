@@ -1,0 +1,282 @@
+/* --------------------
+base 
+-------------------- */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---------- body ---------- */
+body {
+  background-color: #fcf9f2;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------
+component 
+-------------------- */
+/* ---------- title ---------- */
+.c-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #11361F;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.c-title.-primary {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+.c-title.-center {
+  text-align: center;
+}
+
+.c-section {
+  padding: 64px 0;
+}
+@media (min-width: 768px) {
+  .c-section {
+    padding: 96px 0;
+  }
+}
+
+/* ----------  container ---------- */
+.c-container {
+  width: min(90vw, 1149px);
+  margin-inline: auto;
+}
+
+/* ---------- food ---------- */
+.c-food-title {
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .c-food-title {
+    font-size: 1.625rem;
+  }
+}
+
+.c-food-name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+}
+
+.c-food-price {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+}
+
+/* ---------- header ---------- */
+.kv {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: max(375px, 45%);
+}
+@media (min-width: 768px) {
+  .logo {
+    top: 3em;
+    left: 2em;
+    translate: 0;
+  }
+}
+
+.kv-img {
+  object-fit: cover;
+  height: 100dvh;
+}
+
+/* --------------------
+top 
+-------------------- */
+/* ---------- concept ---------- */
+.concept-inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 5vw, 69px);
+}
+@media (min-width: 768px) {
+  .concept-inner {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+
+.concept-picture {
+  margin-top: 24px;
+  max-width: 600px;
+}
+
+.concept-copy {
+  font-weight: 500;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  letter-spacing: 0.06em;
+}
+
+.concept-copy span {
+  display: block;
+}
+
+.concept-copy-english {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: clamp(4rem, 8vw, 5.25rem);
+  letter-spacing: 0.06em;
+  margin-top: 14px;
+}
+@media (min-width: 768px) {
+  .concept-copy-english {
+    margin-top: 20px;
+  }
+}
+
+.concept-description {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .concept-description {
+    align-self: end;
+    max-width: 40%;
+  }
+}
+.concept-text {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .concept-text {
+    margin-top: 40px;
+  }
+}
+
+/* ---------- menu ---------- */
+.menu-food-list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+  margin: 40px auto 0;
+}
+@media (min-width: 768px) {
+  .menu-food-list {
+    gap: 64px;
+    grid-template-columns: 1fr 1fr;
+    margin: 64px auto 0;
+    width: min(90vw, 1149px);
+  }
+}
+
+.menu-food-description {
+  max-width: 90vw;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+.menu-food-text {
+  margin-top: 16px;
+}
+
+/* ---------- shop ---------- */
+.shop {
+  background-color: #fff;
+}
+
+.shop-inner {
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 64px);
+}
+@media (min-width: 768px) {
+  .shop-inner {
+    align-items: center;
+    flex-direction: row;
+    margin: 64px auto 0;
+    max-width: 1149px;
+  }
+}
+
+.shop-description {
+  display: grid;
+  gap: 16px;
+  margin-inline: auto;
+  width: min(90vw, 500px);
+}
+
+.shop-name {
+  font-weight: 500;
+  font-size: clamp(20px, 5vw, 24px);
+}
+
+/* ---------- footer ---------- */
+.footer-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px 0;
+}
+@media (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 96px 0;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 5vw, 32px);
+}
+@media (min-width: 1200px) {
+  .footer-left {
+    flex-direction: row;
+  }
+}
+
+.footer-sns-list {
+  display: flex;
+  gap: 1em;
+}
+
+.copyright {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  background-color: #11361F;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

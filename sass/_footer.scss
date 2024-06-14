@@ -1,0 +1,38 @@
+@use "global" as g;
+@use "mixin" as m;
+
+/* ---------- footer ---------- */
+.footer-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px 0;
+  @include m.mq(md){
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 96px 0;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 5vw, 32px);
+  @include m.mq(xl){
+    flex-direction: row;
+  }
+}
+
+.footer-sns-list {
+  display: flex;
+  gap: 1em;
+}
+.copyright {
+  display: block;
+  font-family: g.$font-title;
+  background-color: g.$color-main;
+  color: #fff; 
+  text-align: center;
+  padding: 24px 0;
+}

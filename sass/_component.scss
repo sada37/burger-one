@@ -1,0 +1,61 @@
+@use "global" as g;
+@use "mixin" as m;
+/* --------------------
+component 
+-------------------- */
+
+/* ---------- title ---------- */
+.c-title {
+  font-family: g.$font-title;
+  font-weight: g.$font-weight-medium;
+  color: g.$color-main;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.c-title.-primary {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+.c-title.-center {
+  text-align: center;
+}
+
+.c-section {
+  padding: 64px 0;
+  @include m.mq(md){
+    padding: 96px 0;
+  }
+}
+
+/* ----------  container ---------- */
+
+.c-container {
+  width: min(90vw,1149px);
+  margin-inline: auto;
+}
+
+/* ---------- food ---------- */
+
+.c-food-title {
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  @include m.mq(md){
+    font-size: 1.625rem;
+  }
+}
+
+.c-food-name {
+  @include m.fontTitle;
+}
+
+.c-food-price {
+  @include m.fontTitle;
+}
+
+
+
+

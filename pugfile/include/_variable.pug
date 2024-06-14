@@ -1,0 +1,11 @@
+- var b = "Burger one"
+
+mixin card(number, alt, name, price, text)
+  picture.menu-food-picture
+    source(srcset=`../images/menu-img${number}.webp`,type="image/webp")
+    img.menu-food-img(src=`../images/menu-img${number}.jpg`,alt=`${alt}`,width="720",height="426")
+  .menu-food-description
+    .c-food-title
+      h3.c-food-name #{name}
+      p.c-food-price #{price}
+    p.menu-food-text #{text}

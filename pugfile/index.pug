@@ -1,0 +1,65 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{b}
+    link(rel="preconnect",href="https://fonts.googleapis.com")
+    link(rel="preconnect",href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap",rel="stylesheet")
+    link(rel="stylesheet",href="css/reset.css")
+    link(rel="stylesheet",href="css/style.css")
+include include/_variable.pug
+// body
+body
+  // header
+  include include/_header.pug
+  // main
+  main
+    // concept
+    section.c-section.concept.c-container
+      h2.c-title.-primary.-center Concept
+      .concept-inner
+        picture.concept-picture
+          source(srcset="../images/hamburger-img.webp",type="image/webp")
+          img.concept-img(src="../images/hamburger-img.png",alt="ハンバーガーの画像",width="667",height="616")
+        .concept-description
+          h3.concept-copy この一口で
+            span みんなを笑顔に!
+          h3.concept-copy-english #{b}!
+          p.concept-text #{b}のハンバーガーは一口で皆さんが笑顔になるように作られています。その秘密はじっくり焼き上げ100%ビーフを使ったお肉や噛み応えのあるパティ、シャキシャキレタスやトマト、オニオンをふんだんに使い食べ応えのあるハンバーガーにあります。
+    // menu
+    section.c-section.menu
+      h2.c-title.-primary.-center Menu
+      ul.menu-food-list
+        li.menu-food-item
+          +card("01","","Burger one Burger","¥800","burger one burgerのテキストburger one burgerのテキストburger one burgerのテキストburger one burgerのテキストburger one burgerのテキストburger one burgerのテキスト")
+        li.menu-food-item
+          +card("02","","Potato set","¥1,200","Potato setのテキストPotato setのテキストPotato setのテキストPotato setのテキストPotato setのテキストPotato setのテキスト")
+        li.menu-food-item
+          +card("03","","Burger one set","¥1,600","Burger one setのテキストBurger one setのテキストBurger one setのテキストBurger one setのテキストBurger one setのテキストBurger one setのテキスト")
+        li.menu-food-item
+          +card("04","","Vegetable sandwich","¥750","Vegetable sandwichのテキストVegetable sandwichのテキストVegetable sandwichのテキストVegetable sandwichのテキストVegetable sandwichのテキストVegetable sandwichのテキスト")
+    //sub-section
+    section.separate
+      picture.separate-picture
+        source(media="(max-width: 720px)",srcset="../images/separate_sp.webp",type="image/webp",width="720",height="452")
+        source(media="(max-width: 720px)",srcset="../images/separate_sp.jpg",width="720",height="452")
+        source(media="(max-width: 1366px)",srcset="../images/separate.webp",type="image/webp",width="1366",height="496")
+        source(media="(max-width: 1366px)",srcset="../images/separate.jpg",width="1366",height="496")
+        source(srcset="../images/separate@1.5x.webp",type="image/webp",width="2049",height="744")
+        img.separate-img(src="../images/separate@1.5x.jpg",alt="鉄板でお肉を焼いている様子",width="2049",height="744")
+    // shop
+    section.c-section.shop
+      h2.c-title.-primary.-center Shop
+      .shop-inner
+        picture.shop-picture
+          source(srcset="../images/shop-img.webp",type="image/webp")
+          img.shop-img(src="../images/shop-img.jpg",alt="店内の様子",width="720",height="402")
+        .shop-description
+          h3.shop-name #{b}原宿本店
+          p.shop-text 原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト原宿本店の説明テキスト
+          address.shop-address
+            p 〒012-3456 東京都渋谷区ABC
+            p TEL 012-345-6789
+  include include/_footer.pug

@@ -1,0 +1,18 @@
+@use "global" as g;
+$breakpoints: (
+  sm: 530px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin mq($breakpoint){
+  @media (min-width:#{map-get($breakpoints,$breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin fontTitle {
+  font-family: g.$font-title;
+  font-weight: g.$font-weight-light;
+}

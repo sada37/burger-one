@@ -1,0 +1,113 @@
+@use "mixin" as m;
+@use "global" as g;
+
+/* --------------------
+top 
+-------------------- */
+
+/* ---------- concept ---------- */
+.concept-inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px,5vw,69px);
+  @include m.mq(md){
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+
+.concept-picture {
+  margin-top: 24px;
+  max-width: 600px;
+}
+
+.concept-copy {
+  font-weight: g.$font-weight-medium;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  letter-spacing: 0.06em;
+}
+
+.concept-copy span {
+  display: block;
+}
+
+.concept-copy-english {
+  @include m.fontTitle;
+  font-size: clamp(4rem, 8vw, 5.25rem);
+  letter-spacing: 0.06em;
+  margin-top: 14px;
+  @include m.mq(md){
+    margin-top: 20px;
+  }
+}
+
+.concept-description {
+  margin-top: 24px;
+}
+@include m.mq(md){
+  .concept-description {
+    align-self: end;
+    max-width: 40%;
+  }
+}
+
+
+.concept-text {
+  margin-top: 32px;
+  @include m.mq(md){
+    margin-top: 40px;
+  }
+}
+
+/* ---------- menu ---------- */
+.menu-food-list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+  margin: 40px auto 0;
+  @include m.mq(md){
+    gap: 64px;
+    grid-template-columns: 1fr 1fr;
+    margin: 64px auto 0;
+    width: min(90vw,1149px);
+  }
+}
+
+.menu-food-description {
+  max-width: 90vw;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+.menu-food-text {
+  margin-top: 16px;
+}
+
+/* ---------- shop ---------- */
+.shop {
+  background-color: #fff;
+}
+.shop-inner {
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 64px);
+  @include m.mq(md){
+    align-items: center;
+    flex-direction: row;
+    margin: 64px auto 0;
+    max-width: 1149px;
+  }
+}
+
+.shop-description {
+  display: grid;
+  gap: 16px;
+  margin-inline: auto;
+  width: min(90vw, 500px);
+}
+
+.shop-name {
+  font-weight: g.$font-weight-medium;
+  font-size: clamp(20px, 5vw, 24px);
+}

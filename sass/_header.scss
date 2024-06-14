@@ -1,0 +1,24 @@
+@use "global" as g;
+@use "mixin" as m;
+/* ---------- header ---------- */
+.kv {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: max(375px,45%);
+  @include m.mq(md){
+    top: 3em;
+    left: 2em;
+    translate: 0;
+  }
+}
+
+.kv-img {
+  object-fit: cover;
+  height: 100dvh;
+}

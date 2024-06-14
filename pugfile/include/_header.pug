@@ -1,0 +1,11 @@
+//- header.pug
+header
+  .kv
+    picture.kv-picture
+      source(media="(max-width: 767px)", srcset="../images/kv-img_sp.webp",type="image/webp",width="720",height="1080")
+      source(media="(max-width: 767px)", srcset="../images/kv-img_sp.jpg",width="720",height="1080")
+      source(media="(max-width: 1365px)",srcset="../images/kv-img.webp",type="image/webp",width="1366",height="768")
+      source(media="(min-width: 1366px)",srcset="../images/kv-img@2x.webp",type="image/webp",width="2732",height="1536")
+      img(class="kv-img",src="../images/kv-img@2x.jpg",srcset="../images/kv-img.jpg 1366w,../images/kv-img@2x.jpg 2732w",sizes="(max-width: 1366px) 100vw, 2732px",width="2732",height="1536",alt="4人で食事をしている様子の画像")
+    h1.page-title
+      img(class="logo",src="../images/logo.svg",width="315",height="150",alt="バーガーワン")
